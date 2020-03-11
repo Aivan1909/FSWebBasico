@@ -1,0 +1,200 @@
+*{
+    font-size: 62.5%;
+    margin: 0;
+    padding: 0;
+}
+/* COLORES */
+:root{
+    --color-primario: #364f6b;
+    --color-secundario: #3fc1c9;
+    --color-claro: #f5f5f5;
+    --color-accent: #fc5185;
+}
+h1{
+    font-size: 4rem;
+    text-align: center;
+}
+h2{
+    font-size: 3.5rem;
+    text-align: center;
+}
+h3{
+    font-size: 3rem;
+    text-align: center;
+}
+h4{
+    font-size: 2.5rem;
+}
+p, div, span, pre, li, a{
+    font-size: 2rem;
+}
+ul{
+    margin-left: 50px;
+}
+body{
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Opera and Firefox */
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    width: calc(100vw - 40px);
+    height: calc(100vh - 80px);
+    margin: 40px 20px;
+    display: grid;
+    grid-template-columns: 10% auto;
+    grid-template-rows: 70px auto;
+    grid-template-areas: "logo_FS head_titulo"
+                        "inicio inicio";
+}
+#head_titulo{
+    grid-area: head_titulo;
+}
+#head_titulo *{
+    margin: auto;
+    text-align: center;
+}
+#head_titulo a{
+    color: black;
+}
+#head_titulo a:hover{
+    color: var(--color-accent);
+}
+#logo_FS{
+    grid-area: logo_FS;
+    width: 100%;
+    display: block;
+}
+#inicio{
+    grid-area: inicio;
+    filter: brightness(100%);
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    margin: 20px 0;
+}
+#inicio .curso{
+    flex: auto 0 1;
+    max-width: 17%;
+    height: auto;
+}
+.curso img{
+    width: 100%;
+}
+.curso p{
+    font-size: 2rem;
+    text-align: center;
+}
+.curso:hover{
+    cursor: pointer;
+}
+.curso:hover img{
+    transform: rotate(40deg);
+    transition: 700ms ease;
+    opacity: 0.5;
+}
+.curso:hover p{
+    color: var(--color-accent);
+    font-weight: bolder;
+}
+
+/* MODAL */
+#modal{
+    display: none;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    grid-template-rows: 40px 10% auto;
+    grid-template-areas: "m_herramientas"
+                        "m_titulo"
+                        "m_contenido";
+    animation-name: deslizar_arriba;
+    animation-duration: 1s;
+}
+@keyframes deslizar_arriba{
+    from{
+        top: 100%;
+        opacity: 0.5;
+    }to{
+        bottom: 0;
+        opacity:1;
+    }
+}
+@keyframes deslizar_abajo{
+    from{
+        bottom: 0;
+        opacity: 1;
+    }to{
+        top: 100%;
+        opacity: 0.5;
+    }
+}
+#m_herramientas{
+    grid-area: m_herramientas;
+    font-size: 2rem;
+    background-color: var(--color-primario);
+    color: var(--color-claro);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-weight: bolder;
+}
+#m_herramientas>*{
+    cursor: pointer;
+}
+#m_anterior,
+#m_siguiente,
+#m_cerrar{
+    border-radius: 100%;
+    padding: 5px;
+    background-color: var(--color-secundario);
+    transition: 500ms ease-in-out;
+}
+#m_anterior:hover,
+#m_siguiente:hover,
+#m_cerrar:hover{
+    background-color: var(--color-primario);
+    color: var(--color-accent);
+    font-weight: bolder;
+}
+
+#m_titulo{
+    grid-area: m_titulo;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-secundario);
+    color: var(--color-primario);
+    text-shadow: 0px 0px 10px var(--color-claro);
+}
+#m_contenido{
+    grid-area: m_contenido;
+    padding: 50px 80px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-claro);
+    background-size: cover;
+    background-position: center;
+}
+#m_contenido>*{
+    flex: 40% 0 1;
+    margin: 0 30px;
+    font-size: 2.5rem;
+    text-align: justify;
+}
+#m_contenido .pres_img{
+    align-self: center;
+    max-width: 300px;
+    display: inline;
+    order: 1;
+}

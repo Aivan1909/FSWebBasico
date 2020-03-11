@@ -32,7 +32,7 @@ function abrir_modal(el){
         }
     }
     if(!sw){
-        alert('Las diapositivas de este tema recién se subirán');
+        abrir_modal_error('Importante...!!!', 'Las diapositivas aun no estan listas para este tema, por favor espera a que se habiliten.<br><br> Muchas gracias.')
     }else{
         modal.style.display = 'grid';
         validar_contenido(diapos[j]);
@@ -46,7 +46,7 @@ function pres_anterior(){
     if(j>=0){
         validar_contenido(diapos[j]);
     }else{
-        alert('Esta es la primera diapositiva.');
+        abrir_modal_error('Tranquilo', 'Esta es la primera diapositiva.');
         j++;
     }
 }
@@ -58,8 +58,8 @@ function pres_siguiente(){
     if(j<diapos.length){
         validar_contenido(diapos[j]);
     }else{
-        cerrar_modal();
-        alert('No hay mas diapositivas');
+        j--;
+        abrir_modal_error('Gracias','Acabaste la presentación por ahora. No hay mas diapositivas');
     }
 }
 /* SIGUIENTE PRESENTACION */
@@ -109,3 +109,17 @@ function validar_contenido(elemento){
     }
 }
 /* FIN VALIDAR CONTENIDO */
+var ven_err_modal = document.getElementById('modal_error');
+/* MODAL DE ERROR */
+function abrir_modal_error(tit, men){
+    ven_err_modal.style.display = "flex";
+    var err_modal = document.getElementById('error_alerta');
+    var err_titulo = err_modal.getElementsByTagName('h4');
+    err_titulo[0].innerHTML=tit;
+    var err_mensaje = err_modal.getElementsByTagName('p');
+    err_mensaje[0].innerHTML = men;
+}
+/* MODAL DE ERROR */
+function cerrar_modal_error(){
+    ven_err_modal.style.display = "none";
+}

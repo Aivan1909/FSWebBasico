@@ -4,22 +4,24 @@ var diapo = [
     bg: './imgs/bg_html.png',
     diapositivas:[
         {
-            titulo: "¿Qué es HTML?",
+            titulo: "SESION 1 _ 31/03/2020",
             subtitulo: "",
             imagen: "https://cdn.pixabay.com/photo/2017/08/05/11/16/logo-2582748_960_720.png",
-            contenido: "HTML5 es un lenguaje markup (de hecho, las siglas de HTML significan Hyper Text Markup Language) usado para estructurar y presentar el contenido para la web.",
-            lista:[]
+            contenido: "",
+            lista:["Estructura Basica", "Textos", "Listas", "Enlace", "Imagenes"],
+            descarga: "descargas/HTML_Sesion_1.rar"
         },
         {
-            titulo: "Qué es HTML",
-            subtitulo: "",
+            titulo: "SESION 2",
+            subtitulo: "Material aun no subido",
             imagen: "",
-            contenido: "Lenguaje de etiquetas que se encarga en estructurar y maquetar una pagina web.",
-            lista:[]
+            contenido: "Proxima Clase el Viernes 3 de Abril de 10:00AM a 12:00PM. Nos vemos ese dia... ;v",
+            lista:[],
+            descarga: ""
         }
         ]
     },
-    {
+    /* {
     tema: 'css',
     bg: './imgs/bg_css.png',
     diapositivas:[
@@ -45,5 +47,5 @@ var diapo = [
             lista:[]
         }
         ]
-    },
+    }, */
 ];

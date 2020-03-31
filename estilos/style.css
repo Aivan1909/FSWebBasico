@@ -203,6 +203,21 @@ body{
     display: inline;
     order: 1;
 }
+#modal #m_contenido a{
+    position: absolute;
+    color: var(--color-secundario);
+    bottom: 30px;
+    animation: parpadeante infinite linear 0.5s;
+    font-size: 4rem;
+}
+@keyframes parpadeante{
+    0%{
+        color: var(--color-secundario);
+    }
+    100%{
+        color: var(--color-accent);
+    }
+}
 #modal_error{
     justify-content: center;
     align-items: center;

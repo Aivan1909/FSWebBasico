@@ -32,7 +32,7 @@ function abrir_modal(el){
         }
     }
     if(!sw){
-        abrir_modal_error('Importante...!!!', 'Las diapositivas aun no estan listas para este tema, por favor espera a que se habiliten.<br><br> Muchas gracias.')
+        abrir_modal_error('Importante...!!!', 'Las diapositivas aun no estan listas para este tema, por favor espera a que se habiliten.<br><br> Muchas gracias :)')
     }else{
         modal.style.display = 'grid';
         validar_contenido(diapos[j]);
@@ -107,8 +107,14 @@ function validar_contenido(elemento){
         }
         contenido.appendChild(elm);
     }
+    var enlace = document.createElement("a");
+    enlace.href = elemento.descarga;
+    enlace.download;
+    enlace.innerText = "Decarga Material de la Sesion";
+    contenido.appendChild(enlace);
 }
 /* FIN VALIDAR CONTENIDO */
+
 var ven_err_modal = document.getElementById('modal_error');
 /* MODAL DE ERROR */
 function abrir_modal_error(tit, men){

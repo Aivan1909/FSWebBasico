@@ -15,7 +15,7 @@ for(let i=0; i<temas.length; i++){
     cur_img.src = temas[i].imagen;
     ini_curso.appendChild(cur_img);
     var cur_descr = document.createElement('p');
-    cur_descr.innerHTML = temas[i].descripcion;
+    cur_descr.innerHTML = "<strong>Tema: </strong>"+temas[i].descripcion;
     ini_curso.appendChild(cur_descr);
     inicio.appendChild(ini_curso);
 }
@@ -75,7 +75,18 @@ function cerrar_modal(){
 /* VALIDAR EL CONTENIDO DE DIAPOS.JS PARA VERIFICAR SU CONTENIDO */
 function validar_contenido(elemento){
     var titulo = document.getElementById('m_titulo');
-    titulo.innerHTML = '<h2>'+diapos[j].titulo+'</h2>';
+    titulo.innerHTML = "";
+    var tit = document.createElement('h3');
+    tit.innerHTML = elemento.titulo;
+    titulo.appendChild(tit);
+    var fecha = document.createElement("date");
+    if(elemento.fecha!=""){
+        fecha.innerHTML = "Publicado el: "+elemento.fecha;
+    }else{
+        fecha.innerText = "";
+    }
+    titulo.appendChild(fecha);
+
     contenido.style.backgroundImage = 'url("'+dia_tema.bg+'")';
     contenido.innerHTML = "";
     if(!elemento.subtitulo==""){
@@ -107,11 +118,18 @@ function validar_contenido(elemento){
         }
         contenido.appendChild(elm);
     }
-    var enlace = document.createElement("a");
-    enlace.href = elemento.descarga;
-    enlace.download;
-    enlace.innerText = "Decarga Material de la Sesion";
-    contenido.appendChild(enlace);
+    var footer = document.getElementById('m_footer') ;
+    footer.innerHTML = "";
+    if(elemento.descarga!=""){
+        var enlace = document.createElement("a");
+        enlace.href = elemento.descarga;
+        enlace.download;
+        enlace.innerText = "Decarga Material de la Sesion";
+    }else{
+        var enlace = document.createElement("span");
+        enlace.innerText = "La Paz - Bolivia";
+    }
+    footer.appendChild(enlace);
 }
 /* FIN VALIDAR CONTENIDO */
 

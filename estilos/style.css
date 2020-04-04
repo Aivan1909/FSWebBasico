@@ -1,3 +1,4 @@
+/* MOBILE FIRST */
 *{
     font-size: 62.5%;
     margin: 0;
@@ -25,7 +26,7 @@ h3{
 h4{
     font-size: 2.5rem;
 }
-p, div, span, pre, li, a{
+p, div, span, pre, li, a, strong{
     font-size: 2rem;
 }
 ul{
@@ -41,17 +42,22 @@ body{
                                   supported by Chrome, Opera and Firefox */
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     background-color: var(--color-claro);
-    width: calc(100vw - 40px);
-    height: calc(100vh - 80px);
-    margin: 40px 20px;
+    margin: auto;
+    width: 100vw;
     display: grid;
-    grid-template-columns: 10% auto;
-    grid-template-rows: 70px auto;
-    grid-template-areas: "logo_FS head_titulo"
-                        "inicio inicio";
+    grid-template-areas: "logo_FS"
+                        "head_titulo"
+                        "inicio";
+}
+#logo_FS{
+    grid-area: logo_FS;
+    width: 40%;
+    max-width: 300px;
+    justify-self: center;
 }
 #head_titulo{
     grid-area: head_titulo;
+    font-size: 3rem!important;
 }
 #head_titulo *{
     margin: auto;
@@ -64,11 +70,6 @@ body{
 #head_titulo a:hover{
     color: var(--color-accent);
 }
-#logo_FS{
-    grid-area: logo_FS;
-    width: 100%;
-    display: block;
-}
 #inicio{
     grid-area: inicio;
     filter: brightness(100%);
@@ -80,19 +81,30 @@ body{
     margin: 20px 0;
 }
 #inicio .curso{
-    flex: auto 0 1;
-    max-width: 17%;
+    margin: 5px 10px;
+    flex: 100% 1 1;
     height: auto;
+    border: 1px var(--color-primario) solid;
+    box-shadow: 5px 5px 5px var(--color-primario);
+    display: flex;
+    align-items: center;
 }
 .curso img{
-    width: 100%;
+    max-width: 70px;
+    margin: 10px;
 }
 .curso p{
-    font-size: 2rem;
+    font-size: 1.8rem;
     text-align: center;
+    margin: 5px;
 }
-.curso:hover{
+.curso strong{
+    font-weight: bolder;
+}
+#inicio .curso:hover{
     cursor: pointer;
+    box-shadow: none;
+    border-color: var(--color-claro);
 }
 .curso:hover img{
     transform: rotate(40deg);
@@ -101,7 +113,6 @@ body{
 }
 .curso:hover p{
     color: var(--color-accent);
-    font-weight: bolder;
 }
 
 /* MODAL */
@@ -113,14 +124,15 @@ body{
     z-index: 1;
     top: 0;
     left: 0;
-    width: 100vw;
+    width: 100%;
     height: 100vh;
 }
-#modal{    
-    grid-template-rows: 40px 10% auto;
+#modal{
+    grid-template-rows: 10% 10% 72% 8%;
     grid-template-areas: "m_herramientas"
                         "m_titulo"
-                        "m_contenido";
+                        "m_contenido"
+                        "m_footer";
     animation-name: deslizar_arriba;
     animation-duration: 1s;
 }
@@ -144,7 +156,6 @@ body{
 }
 #modal #m_herramientas{
     grid-area: m_herramientas;
-    font-size: 2rem;
     background-color: var(--color-primario);
     color: var(--color-claro);
     display: flex;
@@ -154,13 +165,13 @@ body{
 }
 #modal #m_herramientas>*{
     cursor: pointer;
+    font-size: 3rem;
 }
 #modal #m_anterior,
 #modal #m_siguiente,
 #modal #m_cerrar{
     border-radius: 100%;
     padding: 5px;
-    background-color: var(--color-secundario);
     transition: 500ms ease-in-out;
 }
 #modal #m_anterior:hover,
@@ -174,6 +185,7 @@ body{
 #modal #m_titulo{
     grid-area: m_titulo;
     display: flex;
+    flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
     background-color: var(--color-secundario);
@@ -182,33 +194,40 @@ body{
 }
 #modal #m_contenido{
     grid-area: m_contenido;
-    padding: 50px 80px;
+    width: 100%;
+    padding: 5px;
     display: flex;
     flex-flow: row wrap;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     color: var(--color-claro);
     background-size: cover;
     background-position: center;
+    overflow-y: auto;
 }
 #modal #m_contenido>*{
-    flex: 40% 0 1;
-    margin: 0 30px;
+    flex: 50% 0 1;
+    margin: 0 40px;
     font-size: 2.5rem;
     text-align: justify;
+    align-self: center;
 }
 #modal #m_contenido .pres_img{
-    align-self: center;
-    max-width: 300px;
+    max-width: 200px;
     display: inline;
     order: 1;
 }
-#modal #m_contenido a{
-    position: absolute;
-    color: var(--color-secundario);
-    bottom: 30px;
+#modal #m_footer{
+    grid-area: m_footer;
+    color: var(--color-primario);
+    background-color: var(--color-secundario);
+    vertical-align: middle;
+    font-size: 1.5rem;
+    text-align: center;
+}
+#modal #m_footer>a{
     animation: parpadeante infinite linear 0.5s;
-    font-size: 4rem;
+    font-size: 2.5rem;
 }
 @keyframes parpadeante{
     0%{
@@ -257,4 +276,21 @@ body{
 }
 #modal_error #me_cerrar:hover{
     color: var(--color-secundario);
+}
+
+@media screen and (min-width:700px){
+    body{
+        width: 90vw;
+    }
+    #inicio .curso{
+        flex: 25% 1 0;
+    }
+    #modal #m_contenido *{
+        max-width: 35%;
+        flex: 45% 1 0;
+        font-size: 2.5rem;
+    }
+    #modal #m_contenido .pres_img{
+        max-width: 300px;
+    }
 }

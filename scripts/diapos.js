@@ -17,7 +17,7 @@ var diapo = [
             fecha: "",
             subtitulo: "Material aun no subido",
             imagen: "",
-            contenido: "Proxima Clase el Viernes 3 de Abril de 10:00AM a 12:00PM. Nos vemos ese dia... ;v",
+            contenido: "Proxima Clase el Martes 7 de Abril de 10:00AM a 12:00PM. Nos vemos ese dia... ;v",
             lista:[],
             descarga: ""
         }

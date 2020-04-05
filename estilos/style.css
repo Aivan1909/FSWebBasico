@@ -124,8 +124,8 @@ body{
     z-index: 1;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100vh;
+    width: 90vw;
+    height: 90vh;
 }
 #modal{
     grid-template-rows: 10% 10% 72% 8%;

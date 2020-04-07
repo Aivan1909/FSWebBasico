@@ -59,7 +59,7 @@ function pres_siguiente(){
         validar_contenido(diapos[j]);
     }else{
         j--;
-        abrir_modal_error('Gracias','Acabaste la presentación por ahora. No hay mas diapositivas');
+        abrir_modal_error('Gracias','Acabaste la presentación por ahora. No hay mas diapositivas. Por favor pasa al siguiente Curso :9');
     }
 }
 /* SIGUIENTE PRESENTACION */

@@ -20,43 +20,37 @@ var diapo = [
             contenido: "",
             lista:["Imagenes", "Audio", "Video", "Tablas", "Formularios"],
             descarga: "descargas/HTML_Sesion_2.rar"
-        },
-        {
-            titulo: "SESION 3",
-            fecha: "",
-            subtitulo: "Material aun no subido",
-            imagen: "",
-            contenido: "Proxima Clase el Viernes 10 de Abril de 10:00AM a 12:00PM. Nos vemos ese dia... ;v",
-            lista:[],
-            descarga: ""
         }
         ]
     },
-    /* {
+    {
     tema: 'css',
     bg: './imgs/bg_css.png',
     diapositivas:[
         {
-            titulo: "Estructura Basica CSS",
-            subtitulo: "",
+            titulo: "Sesion 1",
+            subtitulo: "Material aun no subido",
             imagen: "",
-            contenido: "",
-            lista:[]
+            contenido: "Proxima Clase el Viernes 10 de Abril de 10:00AM a 12:00PM. Nos vemos ese dia... ;v",
+            lista:[],
+            descarga:""
         },
-        {
-            titulo: "Qué es CSS",
+        /* {
+            titulo: "Sesion 2",
             subtitulo: "",
             imagen: "",
             contenido: "Lenguaje de estilos para una pagina web.",
-            lista:[]
-        },
-        {
+            lista:[],
+            descarga:
+        }, */
+        /* {
             titulo: "Estructura de un CSS",
             subtitulo: "",
             imagen: "",
             contenido: "Estructura de css para una pagina web.",
-            lista:[]
-        }
+            lista:[],
+            descarga:
+        } */
         ]
-    }, */
+    },
 ];

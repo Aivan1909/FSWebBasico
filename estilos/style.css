@@ -122,17 +122,16 @@ body{
     position: fixed;
     background-color: rgba(0, 0, 0, 0.7);
     z-index: 1;
+    width: 100%;
     top: 0;
     left: 0;
-    width: 100%;
     height: -webkit-fill-available;
     height: -moz-fill-available;
     height: -o-fill-available;
     height: -ms-fill-available;
-    margin: auto;
 }
 #modal{
-    grid-template-rows: 10% 10% 72% 8%;
+    grid-template-rows: 8% 14% 70% 8%;
     grid-template-areas: "m_herramientas"
                         "m_titulo"
                         "m_contenido"
@@ -198,19 +197,19 @@ body{
 }
 #modal #m_contenido{
     grid-area: m_contenido;
-    width: 100%;
     padding: 5px;
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
+    align-content: center;
     color: var(--color-claro);
     background-size: cover;
     background-position: center;
     overflow-y: auto;
 }
 #modal #m_contenido>*{
-    flex: 50% 0 1;
+    flex: 50% 1 1;
     margin: 0 40px;
     font-size: 2.5rem;
     text-align: justify;
@@ -226,7 +225,6 @@ body{
     color: var(--color-primario);
     background-color: var(--color-secundario);
     vertical-align: middle;
-    font-size: 1.5rem;
     text-align: center;
 }
 #modal #m_footer>a{
@@ -282,9 +280,14 @@ body{
     color: var(--color-secundario);
 }
 
-@media screen and (min-width:700px){
+@media only screen and (min-width:800px){
     body{
-        width: 90vw;
+        width: 80vw;
+    }
+    #modal,
+    #modal_error{
+        width: 80%;
+        padding: 0 10%;
     }
     h1{
         font-size: 4rem;
@@ -309,10 +312,13 @@ body{
     }
     #modal #m_contenido *{
         max-width: 35%;
-        flex: 45% 1 0;
-        font-size: 2.5rem;
+        flex: 40% 0 0;
+        font-size: 2.85rem;
     }
     #modal #m_contenido .pres_img{
         max-width: 300px;
+    }
+    #modal #m_footer>a{
+        font-size: 3rem;
     }
 }

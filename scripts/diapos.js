@@ -29,6 +29,7 @@ var diapo = [
     diapositivas:[
         {
             titulo: "Sesion 1",
+            fecha:"",
             subtitulo: "Material aun no subido",
             imagen: "",
             contenido: "Proxima Clase el Viernes 10 de Abril de 10:00AM a 12:00PM. Nos vemos ese dia... ;v",
@@ -37,6 +38,7 @@ var diapo = [
         },
         /* {
             titulo: "Sesion 2",
+            fecha:"",
             subtitulo: "",
             imagen: "",
             contenido: "Lenguaje de estilos para una pagina web.",
@@ -45,6 +47,7 @@ var diapo = [
         }, */
         /* {
             titulo: "Estructura de un CSS",
+            fecha:"",
             subtitulo: "",
             imagen: "",
             contenido: "Estructura de css para una pagina web.",

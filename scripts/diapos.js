@@ -28,31 +28,31 @@ var diapo = [
     bg: './imgs/bg_css.png',
     diapositivas:[
         {
-            titulo: "Sesion 1",
+            titulo: "SESION 1",
+            fecha:"14/04/2020",
+            subtitulo: "",
+            imagen: "https://cdn.pixabay.com/photo/2017/08/03/07/51/wallpaper-2574943_960_720.png",
+            contenido: "",
+            lista:["Selectores", "Pseudo-clases", "Fuentes", "Textos", "Colores", "Gradientes"],
+            descarga:"descargas/CSS_Sesion_1.rar"
+        },
+        {
+            titulo: "SESION 2",
             fecha:"",
             subtitulo: "Material aun no subido",
             imagen: "",
-            contenido: "Proxima Clase el Viernes 10 de Abril de 10:00AM a 12:00PM. Nos vemos ese dia... ;v",
+            contenido: "Proxima Clase el Martes 21 de Abril de 10:00AM a 12:00PM. Nos vemos ese dia... ;v",
             lista:[],
             descarga:""
         },
         /* {
-            titulo: "Sesion 2",
+            titulo: "SESION 3",
             fecha:"",
-            subtitulo: "",
+            subtitulo: "Material aun no subido",
             imagen: "",
-            contenido: "Lenguaje de estilos para una pagina web.",
+            contenido: "Proxima Clase el Martes 28 de Abril de 10:00AM a 12:00PM. Nos vemos ese dia... ;v",
             lista:[],
-            descarga:
-        }, */
-        /* {
-            titulo: "Estructura de un CSS",
-            fecha:"",
-            subtitulo: "",
-            imagen: "",
-            contenido: "Estructura de css para una pagina web.",
-            lista:[],
-            descarga:
+            descarga:""
         } */
         ]
     },

@@ -38,14 +38,14 @@ var diapo = [
         },
         {
             titulo: "SESION 2",
-            fecha:"",
-            subtitulo: "Material aun no subido",
-            imagen: "",
-            contenido: "Proxima Clase el Martes 21 de Abril de 10:00AM a 12:00PM. Nos vemos ese dia... ;v",
-            lista:[],
-            descarga:""
+            fecha:"21/04/2020",
+            subtitulo: "",
+            imagen: "https://i.ya-webdesign.com/images/text-clipart-title-box-16.png",
+            contenido: "",
+            lista:["Tamaños", "Contenedores", "Bordes", "Sombras", "Cajas"],
+            descarga:"descargas/CSS_Sesion_2.rar"
         },
-        /* {
+        {
             titulo: "SESION 3",
             fecha:"",
             subtitulo: "Material aun no subido",
@@ -53,7 +53,7 @@ var diapo = [
             contenido: "Proxima Clase el Martes 28 de Abril de 10:00AM a 12:00PM. Nos vemos ese dia... ;v",
             lista:[],
             descarga:""
-        } */
+        },        
         ]
     },
 ];

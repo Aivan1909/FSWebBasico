@@ -48,12 +48,21 @@ var diapo = [
         {
             titulo: "SESION 3",
             fecha:"",
+            subtitulo: "",
+            imagen: "https://oracle-patches.com/images/2019/11/09/flexbox-css_large.jpg",
+            contenido: "",
+            lista:['Flexbox', 'Posicionamiento'],
+            descarga:"descargas/CSS_Sesion_3.rar"
+        },
+        {
+            titulo: "SESION 4",
+            fecha:"29/04/2020",
             subtitulo: "Material aun no subido",
             imagen: "",
-            contenido: "Proxima Clase el Martes 28 de Abril de 10:00AM a 12:00PM. Nos vemos ese dia... ;v",
+            contenido: "Proxima Clase el Martes 05 de Mayo de 10:00AM a 12:00PM. Nos vemos ese dia... ;v",
             lista:[],
             descarga:""
-        },        
+        },
         ]
     },
 ];
